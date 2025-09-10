@@ -1,2 +1,8 @@
+numpy
+pandas
 ipykernel
-python-dotenv
+ipython
+jupyter-client
+jupyter-core
+matplotlib
+bottleneck
