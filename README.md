@@ -1,5 +1,5 @@
 # **Crop Yield Prediction**
-Unpredictable climate conditions have significantly affected agricultural productivity, contributing to global food insecurity (World Food Program USA, 2024). This project aims to identify key drivers of global crop yield and to forecast yields by accounting for weather impacts across different locations. The workflow includes descriptive analysis, correlation analysis, feature engineering, and machine learning modeling. 
+Unpredictable climate conditions have significantly affected agricultural productivity, contributing to global food insecurity (World Food Program USA, 2024). This project aims to identify key drivers of global crop yield and to forecast yields across different locations and crops. The workflow includes descriptive analysis, correlation analysis, feature engineering, and machine learning modeling. 
 
 **Tools, Techniques & Platforms Used**
 
@@ -38,21 +38,22 @@ The following preprocessing steps were applied:
 ### 3. Data Exploration
 - Data Distribution
     - Histograms and boxplots were used to analyze the distributions of crop yield, rainfall, temperature, and pesticide usage.
-    - #histograms for each variable
         - Yield & Pesticide is right skewed
+        - <img src="image/data distribution (histogram).png" alt="Alt text" width="500" height="500">   
 - Correlation Analysis
     - A correlation heatmap was used to identify relationships between numerical variables.
         - There are correlation between Area and pesticides_tonnes, followed by Area and average rainfall
         - There are correlation between Item and hg/ha_yield
+        - <img src="image/correlation heatmap.png" alt="Alt text" width="400" height="400">   
 - Trend Analysis
     - Time series plots were created to analyze crop yield trends across years.
         - The yield and pesticides used increases graduallly over time
+        - <img src="image/trend analysis.png" alt="Alt text" width="500" height="300">   
 - Descriptive Analysis
     - Top 10 Countries by Total Yield (log scale)
-
-        - xxx
+        - <img src="image/Top 10 Countries by Total Yield (log scale).png" alt="Alt text" width="500" height="300">    
     - Top 20 Total Yields by Item
-        - xxx
+        - <img src="image/Top 10 Total Yields by Item.png" alt="Alt text" width="500" height="300">    
 
 ### 4. Modelling
 The dataset was split into training and testing sets (80:20). The following models were evaluated:
@@ -61,21 +62,31 @@ The dataset was split into training and testing sets (80:20). The following mode
 - Random Forest
 
 **Evaluation**
-    - Tree-based models performed better than linear regression, indicating the presence of nonlinear relationships.
-    - Residual Plots
-        - identify the distribution and changing spread of residuals. As a good residual plot,
-        - Residuals should be normally distributed, and there should be no patterns or trends
-        - The result is not heteroscedasticity, meaning that the spread of residuals remains relatively constant across different levels of the fitted values.
-        - #image 
-    - Feature Importance
-        - Bootstrap resampling was applied. Feature importance values were calculated across multiple random resampled datasets
+- Tree-based models performed better than linear regression, indicating the presence of nonlinear relationships.
+
+    | Model | Description | Performance | R2_score | MSE | RMSE | MAE |
+    |------|-------------|-------------|------|-------------|-------------|-------------| 
+    | Linear Regression | Baseline linear model | Moderate | 0.807 | 0.224 | 0.473 | 0.356 |
+    | Decision Tree | Captures non-linear patterns | High | 0.966 | 0.039 |	0.198 |	0.068 |
+    | Random Forest | Ensemble tree-based model | Very High | 0.981 |	0.022	| 0.149	| 0.063 |
+   
+   <br><br>
+    <img src="image/Plots LR.png" alt="Alt text" width="300" height="300"> 
+    <img src="image/Plots DT.png" alt="Alt text" width="300" height="300"> 
+    <img src="image/Plots RF.png" alt="Alt text" width="300" height="300">    
+    <br><br>
+
+- Feature Importance Stability
+    - Feature importance was evaluated using Random Forest with repeated subsampling
+    - Mean importance and MAD (Mean Absolute Deviation) were computed to assess both relevance and stability.
 
 
 ## Findings
-- Model with the best performance is Random Forest , with good residual plot result presented and high accuracy (R²) as 98.13%
-- Low MAD values were observed across multiple resamples, suggesting that the feature importance estimates are stable and consistent.
-- Among all predictors,  rainfall demonstrated the highest mean importance, followed by temperature, indicating that these variables consistently contribute the most to crop yield predictions.
-- Results highlighted that rainfall and temperature were the strongest predictors of yield, offering insights for sustainable agriculture and food security. 
+- Model with the best performance is **Random Forest** after further hypertunning , with good residual plot result presented and high accuracy (R²) as 98.13%
+- Feature importance analysis revealed that crop type and geographic location dominate yield prediction, while environmental variables provide secondary but consistent contributions. Feature importance estimates are highly stable across repeated subsampling.
+- While this limits interpretability of climate effects, it highlights the strong structural determinants of agricultural productivity. A secondary model excluding crop and location variables was therefore considered to assess the isolated impact of environmental factors.
+
+
 
 ## References
 - *World Food Program USA*. (2024, April 29). *How Climate Change Is Causing World Hunger*.  https://wfpusa.org/news/how-climate-change-is-causing-world-hunger/
