@@ -66,7 +66,7 @@ The dataset was split into training and testing sets (80:20). The following mode
         - identify the distribution and changing spread of residuals. As a good residual plot,
         - Residuals should be normally distributed, and there should be no patterns or trends
         - The result is not heteroscedasticity, meaning that the spread of residuals remains relatively constant across different levels of the fitted values.
-        - #image
+        - #image 
     - Feature Importance
         - Bootstrap resampling was applied. Feature importance values were calculated across multiple random resampled datasets
 
