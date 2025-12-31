@@ -1,7 +1,7 @@
 # **Crop Yield Prediction**
 Unpredictable climate conditions have significantly affected agricultural productivity, contributing to global food insecurity (World Food Program USA, 2024). This project aims to identify key drivers of global crop yield and to forecast yields across different locations and crops. The workflow includes descriptive analysis, correlation analysis, feature engineering, and machine learning modeling. 
 
-**Tools, Techniques & Platforms Used**
+**🛠️ Tools, Techniques & Platforms Used**
 
 - **Programming Language:** Python
 - **Libraries:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
@@ -9,7 +9,7 @@ Unpredictable climate conditions have significantly affected agricultural produc
 - **Evaluation Metrics:** R² score ,MAE, MSE, RMSE
 - **Resampling Technique:** Bootstrap
 
-## Project Structure /method
+## ⚙️ Project Structure /method
 
 ### 1. Dataset
 The datasets are sourced from the [World Bank](https://data.worldbank.org/) available on [Kaggle](https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset/data). The dataset is provided under the **World Bank Dataset Terms of Use**.  Please refer to the [World Bank Terms](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets) for details on permitted usage.
@@ -81,7 +81,7 @@ The dataset was split into training and testing sets (80:20). The following mode
     - Mean importance and MAD (Mean Absolute Deviation) were computed to assess both relevance and stability.
 
 
-## Findings
+## 📊 Findings
 - Model with the best performance is **Random Forest** after further hypertunning , with good residual plot result presented and high accuracy (R²) as 98.13%
 - Feature importance analysis revealed that crop type and geographic location dominate yield prediction, while environmental variables provide secondary but consistent contributions. Feature importance estimates are highly stable across repeated subsampling.
 - While this limits interpretability of climate effects, it highlights the strong structural determinants of agricultural productivity. A secondary model excluding crop and location variables was therefore considered to assess the isolated impact of environmental factors.
