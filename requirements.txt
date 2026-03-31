@@ -11,3 +11,4 @@ jinja2
 
 #.\.venv\Scripts\activate   # activate venv if not already
 #pip install -r requirements.txt 
+#& "D:\MDS project\mds-fyp\.venv\Scripts\python.exe" -m pip install xgboost scikeras keras-tuner
