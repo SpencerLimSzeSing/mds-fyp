@@ -56,6 +56,19 @@ The dataset was split into training and testing sets (80:20). The following mode
 - **Humidity and Solar Radiation** were identified as the strongest predictors for daily rainfall occurrence.
 - The **ANN (RNN)** model showed high capability in capturing temporal dependencies in the meteorological time-series data.
 
+## 🚀 Deployment
+
+The model has been deployed as a web application for real-time rainfall prediction. You can find the deployment source code and configuration in the dedicated repository:
+
+🔗 **Deployment Repository:** [mds-fyp-deploy](https://github.com/SpencerLimSzeSing/mds-fyp-deploy)
+
+🔗 **Streamlit :** [app](https://mds2024.streamlit.app/)
+
+### Key Deployment Features:
+- **Platform:** Streamlit / Flask (adjust based on your actual tool).
+- **Model Integration:** Uses the pre-trained **Stacking Ensemble (Meta-ANN)** weight files (`.joblib` / `.h5`).
+- **Interactive UI:** Users can input meteorological variables (Humidity, Temp, etc.) to receive an instant rainfall intensity classification.
+
 ## References
 - Wolpert, D. H. (1992). Stacked generalization. *Neural Networks*.
 - Wu, J., Ma, D., & Wang, W. (2022). Leakage Identification... Based on XGBoost Algorithm.
