@@ -1,13 +1,18 @@
-numpy
 pandas
-ipykernel
-ipython
-jupyter-client
-jupyter-core
+numpy
 matplotlib
-seaborn 
-bottleneck
-jinja2
+seaborn
+folium
+scikit-learn
+imblearn
+statsmodels
+plotly
+keras-tuner
+xgboost
+tensorflow
+scikeras
+joblib
+psutil
 
 #.\.venv\Scripts\activate   # activate venv if not already
 #pip install -r requirements.txt 
