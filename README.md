@@ -80,5 +80,8 @@ The model has been deployed as a web application for real-time rainfall predicti
 - **Platform:** Streamlit / Flask (adjust based on your actual tool).
 - **Model Integration:** Uses the pre-trained **Stacking Ensemble (Meta-ANN)** weight files (`.joblib` / `.h5`).
 - **Interactive UI:** Users can input meteorological variables (Humidity, Temp, etc.) to receive an instant rainfall intensity classification.
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 209d4a1adfa72d1d48b029df21b2a9937a12f161
