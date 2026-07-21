@@ -1,15 +1,27 @@
-# **MDS fyp**
+# **MDS FYP**
 ### Meteorological Variable-Based Daily Rainfall Prediction Using Stacking Ensemble Learning and ANN
+## Project Background
+Weather has a huge influence on agriculture, disaster management, transportation, and everyday decisions — but rainfall is getting harder to predict as climate patterns shift. Traditional forecasting methods often fall short when it comes to capturing the complex relationships between different weather variables. When rainfall predictions are off, it creates real problems — poor resource planning, agricultural setbacks, and inadequate preparation for extreme weather. A data-driven approach, powered by machine learning & deep learning, can help close that gap.
 
+## 🎯 Project Goal & Objectives
+To build a machine learning model that predicts daily rainfall categories based on meteorological data.
+
+Objectives:
+
+- Analyze and preprocess historical weather data to uncover the key factors driving rainfall
+- Develop and compare several machine learning models for rainfall classification
+- Combine multiple base models using a stacking ensemble approach, with an Artificial Neural Network (ANN) as the meta-learner
+- Evaluate performance using accuracy, precision, recall, F1-score, and ROC-AUC
+- Deploy the final model through an interactive Streamlit app for real-time rainfall prediction
+
+
+## ⚙️ Project Structure / Method
 **🛠️ Tools, Techniques & Platforms Used**
 
 - **Programming Language:** Python
 - **Libraries:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Folium, TensorFlow/Keras, XGBoost, Imbalanced-learn (SMOTE), Scikeras
 - **Models:** Stacking Ensemble (Random Forest, XGBoost, SVC, KNN), ANN (SimpleRNN, Sequential), Logistic Regression (Meta-model)
 - **Evaluation Metrics:** Accuracy, Precision, Recall, F1-score, R² Score, MSE, RMSE, MAE
-
-
-## ⚙️ Project Structure / Method
 
 ### 1. Dataset
 The datasets are sourced from the **Malaysian Meteorological Department (MetMalaysia)**, focusing on regional stations (e.g., Alor Setar, Bayan Lepas, Chuping).
@@ -69,7 +81,4 @@ The model has been deployed as a web application for real-time rainfall predicti
 - **Model Integration:** Uses the pre-trained **Stacking Ensemble (Meta-ANN)** weight files (`.joblib` / `.h5`).
 - **Interactive UI:** Users can input meteorological variables (Humidity, Temp, etc.) to receive an instant rainfall intensity classification.
 
-## References
-- Wolpert, D. H. (1992). Stacked generalization. *Neural Networks*.
-- Wu, J., Ma, D., & Wang, W. (2022). Leakage Identification... Based on XGBoost Algorithm.
-- 
+
