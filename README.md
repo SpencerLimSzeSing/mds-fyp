@@ -77,7 +77,7 @@ The model has been deployed as a web application for real-time rainfall predicti
 🔗 **Streamlit :** [app](https://mds2024.streamlit.app/)
 
 ### Key Deployment Features:
-- **Platform:** Streamlit / Flask (adjust based on your actual tool).
+- **Platform:** Streamlit.
 - **Model Integration:** Uses the pre-trained **Stacking Ensemble (Meta-ANN)** weight files (`.joblib` / `.h5`).
 - **Interactive UI:** Users can input meteorological variables (Humidity, Temp, etc.) to receive an instant rainfall intensity classification.
 
