@@ -65,9 +65,9 @@ The dataset was split into training and testing sets (80:20). The following mode
 
 ## 📊 Key Findings
 ### Data Analysis Insights
-- Humidity and temperature variation are the strongest predictors of rainfall
+- Humidity, temperature variation, atmospheric pressure, sunshine, and evaporation as the key meteorological factors influencing rainfall occurrence.
 - Higher humidity and wind speeds were associated with heavier rainfall, while lower pressure, sunshine, and evaporation were commonly observed before rainfall events.
-- Seasonal and regional analysis revealed distinct climate patterns, highlighting the importance of temporal and geographical factors.
+- Seasonal and regional analysis revealed distinct climate patterns, with rainfall varying across locations and following recurring annual temperature cycles.
 
 ### Machine Learning Findings
 - The **Stacking Ensemble** model significantly outperformed individual base learners by reducing variance and bias.
