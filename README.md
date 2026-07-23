@@ -63,10 +63,19 @@ The dataset was split into training and testing sets (80:20). The following mode
 | Benchmark      | Standalone ANN      | 81.0% | Competitive, but had lower recall for the "No Rain" majority class. |
 
 
-## 📊 Findings
+## 📊 Key Findings
+### Data Analysis Insights
+- Humidity and temperature variation are the strongest predictors of rainfall
+- Higher humidity and wind speeds were associated with heavier rainfall, while lower pressure, sunshine, and evaporation were commonly observed before rainfall events.
+- Seasonal and regional analysis revealed distinct climate patterns, highlighting the importance of temporal and geographical factors.
+
+### Machine Learning Findings
 - The **Stacking Ensemble** model significantly outperformed individual base learners by reducing variance and bias.
-- **Humidity and Solar Radiation** were identified as the strongest predictors for daily rainfall occurrence.
 - The **ANN (RNN)** model showed high capability in capturing temporal dependencies in the meteorological time-series data.
+- Feature engineering improved predictive performance by capturing stronger relationships between meteorological variables and rainfall.
+- Despite overlapping rainfall categories, the ensemble model provided more consistent predictions.
+- The final model was deployed as a Streamlit application for real-time rainfall prediction.
+
 
 ## 🚀 Deployment
 
@@ -83,8 +92,14 @@ The model has been deployed as a web application for real-time rainfall predicti
 
 ## 📌 Conclusion 
 
-This project set out to predict daily rainfall severity from meteorological data. After testing several models, the stacking approach with a tuned ANN meta-learner came out on top, outperforming any single model on its own.
+This project set out to analyse and predict daily rainfall severity from meteorological data. After testing several models, the stacking approach with a tuned ANN meta-learner came out on top, outperforming any single model on its own.
 
 What stood out was how much the ensemble helped with imbalanced rainfall categories — combining different algorithms picked up on patterns that individual models missed. The final model is deployed through a Streamlit app, so users can plug in weather inputs and get predictions in real time.
 
 Beyond the technical result, this project shows what's possible when machine learning meets weather analytics — giving weather-sensitive industries a more reliable way to plan around what's coming.
+
+### Business Value of the proejct 
+- Supports agricultural planning through more reliable rainfall forecasting.
+- Assists disaster preparedness by improving early identification of heavy rainfall events.
+- Helps transportation and operations anticipate weather-related disruptions.
+- Provides an interactive decision-support dashboard for real-time rainfall prediction and weather monitoring.
